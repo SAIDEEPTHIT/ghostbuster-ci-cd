@@ -1,0 +1,7 @@
+# Runtime
+streamlit>=1.32
+pandas>=2.0
+
+# Security tools (also installed by CI for redundancy)
+bandit>=1.7.5
+pip-audit>=2.7.0

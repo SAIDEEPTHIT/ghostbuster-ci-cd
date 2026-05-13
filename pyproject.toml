@@ -1,0 +1,27 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "ghostbuster-cicd"
+version = "1.0.0"
+description = "AI Hallucination & Security Validator for CI/CD pipelines"
+readme = "README.md"
+requires-python = ">=3.10"
+license = {text = "MIT"}
+authors = [{name = "GhostBuster Contributors"}]
+dependencies = [
+    "streamlit>=1.32",
+    "pandas>=2.0",
+]
+
+[project.optional-dependencies]
+security = ["bandit>=1.7.5", "pip-audit>=2.7.0"]
+test = ["pytest>=7.4"]
+
+[project.scripts]
+ghostbuster = "ghostbuster.cli:main"
+
+[tool.setuptools.packages.find]
+include = ["ghostbuster*"]
+exclude = ["demo_vulnerable*", "tests*", "dashboard*"]

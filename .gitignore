@@ -17,3 +17,4 @@ venv/
 
 bas
 demo_vulnerable/
+tests/
